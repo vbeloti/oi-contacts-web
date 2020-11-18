@@ -1,7 +1,6 @@
 import React from 'react';
 import cnpjValidate from './cnpjValidate';
 import cpfValidate from './cpfValidate';
-import normalize from './normalize';
 
 type validatecpfCnpjProps = {
   type: string;
@@ -24,7 +23,6 @@ const validatecpfCnpj = ({
       }
     }
   } else if (doc.length === 14) {
-    console.log(doc);
     const cnpjValid = cnpjValidate(doc);
     if (!cnpjValid) {
       setErrors({ ...errors, document: 'CNPJ Inválido' });

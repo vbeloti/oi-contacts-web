@@ -40,7 +40,7 @@ const Form = ({
 
     if (validate) {
       try {
-        const response = await api.get('/contacts', {
+        const response = await api.get('/contacts/search', {
           params: {
             type, document: documentNormalized, state: uf, city,
           },

@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 import { Container, LabelMessage, ErrorMessage } from '../styles/components/input-text';
 
 type FieldsetCheckboxProps = {

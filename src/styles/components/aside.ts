@@ -22,6 +22,12 @@ export const Container = styled.div`
 export const BoxLogo = styled.div`
   display: flex;
   flex-direction: column;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const BoxInfo = styled.div`

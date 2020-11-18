@@ -7,13 +7,10 @@ import Home from '../pages/Home';
 
 const Routes: React.FC = () => (
   <Switch>
-
     <Route path="/create" component={Register} />
     <Route path="/peoples" component={Manager} />
     <Route path="/list" component={List} />
     <Route path="/" exact component={Home} />
-
-    {/* <Route path="/rooms" exact component={Rooms} /> */}
   </Switch>
 );
 

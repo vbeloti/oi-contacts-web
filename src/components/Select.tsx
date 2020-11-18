@@ -1,6 +1,11 @@
-/* eslint-disable no-underscore-dangle */
 import React from 'react';
 import { Container, LabelMessage } from '../styles/components/select';
+
+type Options = {
+  _id: string;
+  city_name: string;
+  uf_name: string;
+}
 
 type SelectProps = {
   label: string;
@@ -15,8 +20,9 @@ const Select = ({
   <Container>
     <label>
       <LabelMessage>{label}</LabelMessage>
-      <select defaultValue={value} onChange={onChange}>
-        {options?.map((option: any) => (
+      <select value={value} onChange={onChange}>
+        <option value="">Selecione</option>
+        {options?.map((option: Options) => (
           <option
             key={option._id}
             value={option.uf_name || option.city_name}

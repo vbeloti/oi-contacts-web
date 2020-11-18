@@ -32,7 +32,6 @@ const validateRegister = ({
     toast.error('CNPJ Inválidos');
   }
 
-  console.log(normalize(phone).length);
   if (normalize(phone).length > 12 || normalize(phone).length < 11) {
     error = true;
     toast.error('Número de telefone Inválido');

@@ -15,12 +15,12 @@ const Home = () => (
         <Link to="/create"><h2>Criar Pessoa</h2></Link>
       </Card>
       <Card>
-        <Link to="/create"><img src={users} alt="Users logo" /></Link>
-        <Link to="/create"><h2>Gerenciar Pessoas</h2></Link>
+        <Link to="/peoples"><img src={users} alt="Users logo" /></Link>
+        <Link to="/peoples"><h2>Gerenciar Pessoas</h2></Link>
       </Card>
       <Card>
-        <Link to="/create"><img src={phone} alt="Phone logo" /></Link>
-        <Link to="/create"><h2>Lista de Telefone</h2></Link>
+        <Link to="/list"><img src={phone} alt="Phone logo" /></Link>
+        <Link to="/list"><h2>Lista de Telefone</h2></Link>
       </Card>
     </BoxHome>
   </Container>

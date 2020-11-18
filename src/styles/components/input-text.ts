@@ -30,7 +30,7 @@ export const LabelMessage = styled.span<LabelMessageProps>`
 
   ${(props) => props.isField && css`
     & {
-      top: -15px;
+      top: -10px;
       color: #00ab0f;
     }
 

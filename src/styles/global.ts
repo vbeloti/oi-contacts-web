@@ -7,4 +7,8 @@ export default createGlobalStyle`
         box-sizing: border-box;
         outline: 0;
     }
+
+    body {
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
 `;

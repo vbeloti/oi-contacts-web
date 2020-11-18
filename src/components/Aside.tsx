@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import { Container, BoxLogo, BoxInfo } from '../styles/components/aside';
 
 import logo from '../assets/logo.svg';
@@ -12,7 +13,7 @@ type AsideProps = {
 const Aside = ({ title, phrase }: AsideProps) => (
   <Container>
     <BoxLogo>
-      <img src={logo} alt="Logo Oi" />
+      <Link to="/"><img src={logo} alt="Logo Oi" /></Link>
       <h2>
         Oi
         {' '}
