@@ -2,7 +2,7 @@
 
 - [Oi-Contacts]
     - [Resumo](#resumo)
-    - [Link Demonstração API](#link-demonstracao-api)
+    - [Link Demonstração Web](#link-demonstracao-web)
     - [Pré Requisitos](#pré-requisitos)
     - [Instalando](#instalando)
     - [Executando a aplicação](#executando-a-aplicacao)
@@ -13,7 +13,7 @@
 Esta é uma aplicação construída com Typescript + React.js, foi desenvolvida baseado na API <a href="https://github.com/vbeloti/oi-contacts-api">Oi Contacts API</a>.
 
 
-## Link Demonstração API
+## Link Demonstração Web
 <a href="https://oi-contacts.vercel.app">https://oi-contacts.vercel.app</a>
 
 ### Pré-requisitos
