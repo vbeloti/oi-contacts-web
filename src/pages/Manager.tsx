@@ -30,6 +30,11 @@ const Manager = () => {
       api
         .get<PeoplesData>(`/contacts/?page=${page}`)
         .then((response) => {
+          const dataAlphabetical = response.data.data.sort((a, b) => {
+            if (a.name.toLowerCase().trim() < b.name.toLowerCase().trim()) return -1;
+            if (a.name.toLowerCase().trim() > b.name.toLowerCase().trim()) return 1;
+            return 0;
+          });
           setPeoples(response.data.data);
           setInfoPage({ pages: response.data.pages });
         })

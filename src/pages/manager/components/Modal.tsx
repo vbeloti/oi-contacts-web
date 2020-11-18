@@ -119,7 +119,13 @@ const Modal = ({
 
           peoples[indexPeople] = newPeople;
 
-          setPeoples([...peoples]);
+          const dataAlphabetical = peoples.sort((a, b) => {
+            if (a.name.toLowerCase().trim() < b.name.toLowerCase().trim()) return -1;
+            if (a.name.toLowerCase().trim() > b.name.toLowerCase().trim()) return 1;
+            return 0;
+          });
+
+          setPeoples([...dataAlphabetical]);
           toast.success('Dados Atualizaddos com sucesso');
         }
       } catch (error) {
