@@ -13,6 +13,10 @@ export const Container = styled.div`
     font-size: 1rem;
     font-weight: bold;
   }
+
+  @media (max-width: 850px) {
+    margin: 0.5rem 0;
+  }
 `;
 
 type LabelMessageProps = {

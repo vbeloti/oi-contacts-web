@@ -1,3 +1,4 @@
+/* eslint-disable no-return-assign */
 import React, { useCallback, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { Container, ContainerHeaderForm } from '../styles/pages/manager';
@@ -23,14 +24,20 @@ const Manager = () => {
   const [infoPage, setInfoPage] = useState({ pages: 1 });
 
   useEffect(() => {
-    api
-      .get<PeoplesData>(`/contacts/?page=${page}`)
-      .then((response) => {
-        setPeoples(response.data.data);
-        setInfoPage({ pages: response.data.pages });
-      })
-      .catch((error) => toast.error(error?.response?.data?.message))
-      .finally(() => setIsLoading(false));
+    let mounted = true;
+
+    if (mounted) {
+      api
+        .get<PeoplesData>(`/contacts/?page=${page}`)
+        .then((response) => {
+          setPeoples(response.data.data);
+          setInfoPage({ pages: response.data.pages });
+        })
+        .catch((error) => toast.error(error?.response?.data?.message))
+        .finally(() => setIsLoading(false));
+    }
+
+    return () => { mounted = false; };
   }, [page]);
 
   const handleModal = (index: number) => {
